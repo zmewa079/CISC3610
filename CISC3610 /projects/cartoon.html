@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Bon Voyage!</title>
+        <script type="text/javascript">
+        function draw() {
+            var canvas = document.getElementById("canvas1");
+            if (canvas.getContext) {
+                var ctx = canvas.getContext("2d");
+            
+            /* background color of entire canvas  */
+            ctx.fillStyle = "#004f99";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            /* color for sky rectangle */
+            ctx.fillStyle = "#001a33"; 
+            ctx.fillRect(0, 0, 925, 300);
+
+            /* rectangle for sailboat */
+            ctx.fillStyle = "#804000";
+            ctx.fillRect(310, 320, 300, 55);
+
+            /* tiny rectangle above base rectangle of sailboat */
+            ctx.fillStyle = " #ffe6ff";
+            ctx.fillRect(445, 270, 30, 50);
+
+            /* for loop for the stars */
+            for (var i = 0; i < 6; i++) {
+            for (var j = 0; j < 20; j++) {
+              ctx.beginPath();
+              var x = 25 + j * 50; 
+              var y = 25 + i * 50; 
+              var radius = 1; 
+              var startAngle = 0; 
+              var endAngle = Math.PI + Math.PI; 
+
+            ctx.arc(x, y, radius, startAngle, endAngle);
+            ctx.fillStyle = "#ffffff"
+            ctx.fill();
+
+            
+            /* circle for the moon */
+            ctx.beginPath();
+            ctx.arc(130, 75, 70, 0, 2 * Math.PI);
+            ctx.fillStyle = "#ffe6b3"
+            ctx.fill();
+
+            /* triangle for sailboat */
+            ctx.beginPath();
+            ctx.moveTo(460, 50);
+            ctx.lineTo(560, 280);
+            ctx.lineTo(360, 280);
+            ctx.fillStyle = "#b366ff";
+            ctx.fill();
+
+            /* line in the middle of sails(triangle) */
+            ctx.beginPath();
+            ctx.moveTo(460, 50);
+            ctx.lineTo(460, 280);
+            ctx.stroke();
+
+            /* waves in the water */
+            ctx.beginPath();
+            ctx.moveTo(400,400);
+            ctx.lineTo(500, 400);
+            ctx.stroke();
+
+            /* waves in the water */
+            ctx.beginPath();
+            ctx.moveTo(450,450);
+            ctx.lineTo(550, 450);
+            ctx.stroke();
+
+            /* waves in the water */
+            ctx.beginPath();
+            ctx.moveTo(500,530);
+            ctx.lineTo(410, 530);
+            ctx.stroke();
+
+            /* waves in the water */
+            ctx.beginPath();
+            ctx.moveTo(30,450);
+            ctx.lineTo(130, 450);
+            ctx.stroke();
+
+            /* waves in the water */
+            ctx.beginPath();
+            ctx.moveTo(50,540);
+            ctx.lineTo(160, 540);
+            ctx.stroke();
+
+            /* waves in the water */
+            ctx.beginPath();
+            ctx.moveTo(50,360);
+            ctx.lineTo(160, 360);
+            ctx.stroke();
+
+            /* waves in water */
+            ctx.beginPath();
+            ctx.moveTo(820,360);
+            ctx.lineTo(720, 360);
+            ctx.stroke();
+
+            /* waves in the water */
+            ctx.beginPath();
+            ctx.moveTo(820,450);
+            ctx.lineTo(720, 450);
+            ctx.stroke();
+
+            /* waves in the water */
+            ctx.beginPath();
+            ctx.moveTo(820,540);
+            ctx.lineTo(710, 540);
+            ctx.stroke();
+
+            /* text caption */ 
+            ctx.font = "30px Arial";
+            ctx.fillText("Bon Voyage!",400,590);
+        } 
+
+      }
+   }
+     }
+        </script>
+        <style type="text/css"> canvas { border: 1px solid black; } </style>
+        
+    </head>
+    <body onload="draw();">
+        <canvas id="canvas1" width="925"height="600"></canvas>
+    </body>
+</html>
