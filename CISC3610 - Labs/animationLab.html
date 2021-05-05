@@ -1,0 +1,91 @@
+ <!DOCTYPE html> 
+ <html lang="en"> 
+ 
+ <head> 
+ 
+ <meta charset="UTF-8"> 
+ 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+ <title>Number Counter</title>
+ 
+ <style> 
+ 
+    body { 
+     
+         background-color: #a372c4; 
+     
+    } 
+     
+    canvas { 
+       
+        background-color: white; 
+        border: 1px solid black; 
+        padding: 0; 
+        margin: auto; 
+        display: block; 
+        width: 200px; 
+    } 
+    
+    button { 
+        
+        font-size: 50px; 
+        background-color: #222831; 
+        color: rgb(213, 179, 245); 
+        margin: auto; 
+        padding: 0px; 
+        display: block; 
+        width: 200px; 
+        border: none; 
+        border-radius: 10px; 
+    } 
+    
+    </style> 
+    
+</head> 
+    
+    <body> 
+    
+        <canvas id='canvas' width='200' height='150'></canvas> 
+        <button onclick="startCount()">START</button> 
+        <script> 
+            var canvas = document.getElementById("canvas"); 
+            var ctx = canvas.getContext("2d"); 
+            var spriteSheet = new Image(); 
+            spriteSheet.src = "numbers"
+            var numberWidth = 200; 
+            var numberHeight = 300; 
+            
+            window.onload = function() { 
+            // drawing the "0" initially 
+            ctx.drawImage(spriteSheet, 0, 0, 200, 300, 50, 0, 100, 150); 
+    }; 
+    
+    function startCount() { 
+        
+    // i tracks what number to draw 
+    var i = 0; 
+    
+    // the following function will be called infinitely many times, at an interval of 500ms each. 
+    
+    setInterval(function() { 
+        
+        if (i >= 10) { 
+            ctx.clearRect(0, 0, 200, 150); 
+            ctx.drawImage(spriteSheet, 200, 0, 200, 300, 0, 0, 100, 150); 
+            ctx.drawImage(spriteSheet, 0, 0, 200, 300, 100, 0, 100, 150); 
+            
+        } else { 
+            ctx.clearRect(0, 0, 200, 150); 
+            ctx.drawImage(spriteSheet, 200 * i, 0, 200, 300, 50, 0, 100, 150); 
+        } 
+        i++ 
+    },  500); 
+    
+} 
+
+      </script> 
+
+    </body> 
+
+</html>
