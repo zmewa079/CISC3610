@@ -1,0 +1,58 @@
+<html>  
+<head>   
+<title> Sound Machine </title> 
+</head>
+
+<script>
+
+  
+function playSound1() {
+   var sound = document.getElementById("audio1");    
+          sound.play();                                       
+      }
+      function playSound2() {
+          var sound = document.getElementById("audio2");       
+          sound.play();  
+      }
+      function playSound3() {
+          var sound = document.getElementById("audio3");  
+          sound.play();
+      }
+      function playSound4() {
+          var sound = document.getElementById("audio4");
+          sound.play();
+      }
+      function playSound5() {
+          var sound = document.getElementById("audio5");
+          sound.play();
+      }
+      function playSound6() {
+          var sound = document.getElementById("audio6");
+          sound.play();
+      }
+</script>
+
+<body>   
+
+   <audio id="audio1" src="http://fast.moodmixes.com/images/classical_preview.mp3" ></audio>      
+   <audio id="audio2" src="http://fast.moodmixes.com/images/world_preview.mp3" ></audio>
+   <audio id="audio3" src="http://fast.moodmixes.com/images/newage_preview.mp3"></audio>
+   <audio id="audio4" src="http://fast.moodmixes.com/images/jazz_preview.mp3" ></audio>
+   <audio id="audio5" src="http://fast.moodmixes.com/images/chillout_preview.mp3" ></audio>
+   <audio id="audio6" src="http://fast.moodmixes.com/images/happyrock_preview.mp3" ></audio>
+
+   <div style="background-color:lavender;width:380px;height:250px;margin:0; display:table;margin-right:auto;margin-left:auto;">  
+
+       <h2 style="margin-left:100px;margin-top:10px"> Sound Machine </h2>                             
+       <button style="padding:20px" onclick="playSound1();">sound 1</button>                           
+       <button style="padding:20px" onclick="playSound2();">sound 2</button>
+       <button style="padding:20px" onclick="playSound3();">sound 3</button>
+       <button style="padding:20px" onclick="playSound4();">sound 4</button>
+       <button style="padding:20px" onclick="playSound5();">sound 5</button>
+       <button style="padding:20px" onclick="playSound6();">sound 6</button>
+
+   </div>   
+
+</body>
+
+</head> 
