@@ -1,1 +1,1 @@
-# CISC3610
+# Project and Labs for CISC 3610
